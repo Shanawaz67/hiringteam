@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!----------------------------- Css Links ---------------------------------->
+    <link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <style>
+        .secAEC {padding: 0%;display: block;position: relative;width: 100%;height: auto;}
+        .carousel-cell {width: 100%;height: 500px;margin-right: 10px;max-height: 500px;position: relative; /* Important for overlay positioning */overflow: hidden;}
+        .carouselcellcm {display: block;position: relative;width: 100%;height: 100%;}
+        .carousel-cell img {width: 100%;height: 100%;object-fit: cover; /* Ensures the image covers the cell */}
+        .dark-overlay {position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.4); /* Semi-transparent dark overlay */z-index: 1; /* Place it above the image */}
+        .carouselcontent {width: 60%;position: absolute;top: 20%;left: 12%;z-index: 2; /* Place content above the overlay */color: #fff; /* White text for better contrast */}
+        .carouselcontent p {font-size: 30px;}
+    </style>
+    
+    <section class="secAEC">
+        <div>
+            <div class="carousel" data-flickity='{ "autoPlay": 1500 }'>
+                <div class="carousel-cell">
+                    <div class="carouselcellcm">
+                        <img src="./assters/images/cheerful-colleagues-working-blueprint.jpg" alt="">
+                        <div class="dark-overlay"></div>
+                        <div class="carouselcontent">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate nesciunt ratione rerum est, aut nam.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-cell">
+                    <img src="./assters/images/bg-home1-2.jpg" alt="">
+                    <div class="dark-overlay"></div>
+                </div>
+                <div class="carousel-cell">
+                    <img src="./assters/images/medium-shot-people-sitting-table.jpg" alt="">
+                    <div class="dark-overlay"></div>
+                </div>
+                <div class="carousel-cell">
+                    <img src="./assters/images/smiling-students-talking-lesson.jpg" alt="">
+                    <div class="dark-overlay"></div>
+                </div>
+                <div class="carousel-cell">
+                    <img src="./assters/images/stylish-elegant-couple-car-salon.jpg" alt="">
+                    <div class="dark-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!------------------------- Script Code ---------------------------------->
+    <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          x.classList.toggle("show"); // Toggle the "show" class to trigger transition
+        }
+    </script>
+</body>
+</html>

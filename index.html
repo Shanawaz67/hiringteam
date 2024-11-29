@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!----------------------------- Css Links ---------------------------------->
+    <link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-------------------------------------- Header Content ----------------------------------------------->
+    <header class="headPage">
+        <nav class="navHead">
+            <div class="inDivHead">
+                <div class="innerDivCont">
+                    <ul class="ulCont">
+                        <li><i class="fa-solid fa-location-dot"></i> <p>Vijayawada <a href="">(View Map)</a></p></li>
+                        <li><i class="fa-solid fa-phone"></i> <p><a href="">1234567890</a></p></li>
+                    </ul>
+                </div>
+                <div class="innerSocialIcons">
+                    <ul class="socialMedia">
+                        <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mainHeader topnav">
+                <div class="logoDiv active">
+                    <a href=""><img src="./assters/images/Black & White Minimalist Business Logo (2).png" alt="HiringTeamLogo"></a>
+                </div>
+                <div class="menuList">
+                    <ul class="ulMenuList mobile-container" id="myLinks">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./aboutus.html">About Us</a></li>
+                        <li class="dropDown">
+                            <button class="dropBtn">Services <i class="fa-solid fa-angle-down dA"></i></button>
+                           <div class="divSubMenuList">
+                                <ul class="subMenuList">
+                                    <li><a href="./placements.html"><i class="fa-solid fa-chevrons-right"></i> Placements</a></li>
+                                    <li><a href="./staffing.html"><i class="fa-solid fa-chevrons-right"></i> Staffing</a></li>
+                                    <li><a href="./abroadcontries.html"><i class="fa-solid fa-chevrons-right"></i> Abroad Education</a></li>
+                                </ul>
+                           </div>
+                        </li>
+                        <li><a href="./careers.html">Careers</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa-solid fa-bars"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <!--------------------------- For Banner Carousel ------------------------------>
+
+    <style>
+        .secBanCaro{padding: 0;height: auto;}
+        .carousel-cell {width: 100%;height: 600px;margin-right: 10px; position: relative; /* Ensure that child elements can be positioned relative to this */ background-image: url("assters/images/slide-home1.jpg");background-position: center;background-repeat: no-repeat;background-size: cover;}
+
+        .carousel-cell>img {width: 40%;height: 100%;z-index: -1; /* Ensure image is behind the content */display: flex;float: right;}
+
+        .carousel-cell>div.carouselContent {position: absolute;top: 20%; /* Position at the top */left: 15%;right: 0; /* Adjust the margin to move content */z-index: 9;max-width: 500px; /* Ensure h1 takes full width */color: black; /* Text color */padding: 0px 0; /* Add some padding */border-radius: 5px;height: auto;}
+
+        /* Adjust the 'Read More' button inside .carouselContent */
+        .carouselContent .RM {margin-top: 20px;border-radius: 5px;display: flex;justify-content: center;align-items: center;width: 30%;height: 6vh;background-color: var(--c3);text-transform: uppercase;}
+
+        .carouselContent>p{font-size: 18px;font-weight: 600;padding-top: 20px;}
+        .carouselContent>h1{font-size: 50px; font-weight: 900; color: var(--c4);padding-top: 10px;}
+        .crPara{color: var(--c4);font-size: 20px;font-weight: 600;}
+        .carouselContent .RM a {color: #fff;text-decoration: none;font-weight: bold;}
+
+
+        /* big buttons, no circle */
+        .flickity-prev-next-button {width: 100px;height: 100px;background: transparent;}
+        /* arrow color */
+        .flickity-prev-next-button .arrow {fill: white;}
+        .flickity-prev-next-button.no-svg {color: white;}
+        .flickity-prev-next-button:hover {background: transparent;}
+        /* hide disabled button */
+        .flickity-prev-next-button:disabled {display: none;}
+
+        /******************************** For Mobile Responsive ********************************************/
+        @media only screen and (max-width:500px){
+            .carousel-cell>img{display: none;}
+            .carouselContent{width: 100%;margin: 0;}
+            .carousel-cell>div.carouselContent{position: absolute;left: 2%;}
+        }
+
+        /********************* For Tab Responsive **************************/
+        @media (min-width:500px) and (max-width:1024px){
+            .carousel-cell>div.carouselContent{position: absolute;left: 5%;}
+        }
+    </style>
+
+    <section class="widget-section secBanCaro">
+        <div class="divBanCaro">
+            <div class="carousel" data-flickity>
+                <div class="carousel-cell">          
+                    <img class="d-block w-100" src="./assters/images/man-slide.png" alt="mainSlider1">
+                    <div class="carouselContent">
+                        <p class="crPara">Hiring Team</p>
+                        <h1>Job Consulting For Your Career</h1>
+                        <p>A Little initiative goes long way</p>
+                        <div class="RM">
+                            <a href="./DMBlog1.html">Get A Quote</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-cell">
+                    <img class="d-block w-100" src="./assters/images/woman-slide.png" alt="mainSlider2">
+                    <div class="carouselContent">
+                        <p class="crPara">Wings International</p>
+                        <h1>Technology Driven</h1>
+                        <p>Wings International believes in using latest technology in all services offerings.</p>
+                        <div class="RM">
+                            <a href="./DMBlog1.html">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---------------------------------- Section For Box Content ---------------------------------------->
+    <style>
+        .divBC{display: grid; grid-template-columns: repeat(4,1fr);gap: 22px;}
+        .boxContent{width: 100%;box-shadow: var(--bs);text-align: center;line-height: 2.1rem;padding: 16px 16px;}
+        .boxContent>i{font-size: 50px;color: var(--c3);}
+        .boxContent>p{font-size: 25px;font-weight: 600;color: var(--c2);}
+        
+        /************************************ For Mobile Responsive *********************************************/
+        @media only screen and (max-width:500px){
+            .divBC{display: grid;grid-template-columns: repeat(1,1fr)};
+        }
+
+        /*********************************** For Tab Responsive ************************************/
+        @media (min-width:500px) and (max-width:1024px){
+            .divBC{display: grid;grid-template-columns: repeat(2,1fr)};
+        }
+    </style>
+
+    <section class="widget-section secBC">
+        <div class="container divBC">
+            <div class="boxContent">
+                <i class="fa-solid fa-medal"></i>
+                <p>Placements</p>
+            </div>
+            <div class="boxContent">
+                <i class="fa-solid fa-user-tie"></i>
+                <p>Staffing</p>
+            </div>
+            <div class="boxContent">
+                <i class="fa-solid fa-user-graduate"></i>
+                <p>Corporate Training</p>
+            </div>
+            <div class="boxContent">
+                <i class="fa-solid fa-user"></i>
+                <p>Campus Drive</p>
+            </div>
+        </div>
+    </section>
+
+    <!--------------------------------- Section For Mission ---------------------------------------->
+    <style>
+        .divMis{background-color: var(--c4);display: none;}
+        .inDivMis{display: flex;align-items: center;justify-content: space-around;}
+        .innerDivMis{width: 45%;padding: 16px 16px;}
+        .innerDivMis>img{width: 100%;}
+        .innerDivMis2{width: 35%;padding: 16px 16px;}
+        .capsPara{font-size: 14px;text-transform: uppercase;font-weight: 900;color: #fff;}
+        .innerDivMis2>h1{font-size: 40px;font-weight: 800;color: var(--c1);padding-top: 16px ;}
+        .innerDivMis2>p{color: var(--c1);padding-top: 16px;}
+        .innerDivMis2>div h5,p{color: var(--c1);}
+        .innerDivMis2>div h5{font-size: 16px;}
+        .innerDivMis2>div{padding-top: 16px;}
+
+        /****************************** For Mobile Responsive **********************************/
+
+        @media only screen and (max-width:500px){
+            .inDivMis{display: grid;grid-template-columns: 1fr;}
+            .innerDivMis{width: 100%;}
+            .innerDivMis2{width: 100%;}
+        }
+
+        /************************ For Tab Responsive ************************/
+
+        @media (min-width:500px) and (max-width:1024px){
+            .inDivMis{display: grid;grid-template-columns: 1fr;}
+            .innerDivMis{width: 100%;}
+            .innerDivMis2{width: 100%;}
+        }
+    </style>
+    <section class="widget-section secMis">
+        <div class="container divMis">
+            <div class="inDivMis">
+                <div class="innerDivMis">
+                    <img src="./assters/images/chandra.jpeg" alt="CeoImg">
+                </div>
+                <div class="innerDivMis2">
+                    <p class="capsPara">who we are</p>
+                    <h1>Our Mission,Values and Motto</h1>
+                    <p>Mr. P.V. Suman Chandra the Director and one of the founding members of Wings International Group is a Post Graduate in IT. He has more than 12+ years of experience in placements, software training, development and overseas education consultancy business.</p>
+                    <div>
+                        <h5>Suman Chandra</h5>
+                        <p>Founder & CEO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----------------------------- Section For What We Bring -------------------------------------->
+    <style>
+        .secWB{background-color: #E5EEF6;}
+        .inDivWB{display: flex;justify-content: space-between;align-items: center;}
+        .innerDivTitle>p{font-size: 16px;font-weight: 900;text-transform: uppercase;color: var(--c2);}
+        .innerDivTitle>h1{font-size: 40px;font-weight: 800;text-transform: capitalize;padding-top: 15px;}
+        .allServices{font-size: 16px; font-weight: 900;text-transform: uppercase;text-decoration: underline; color: var(--c2);}
+        .allServices>p{color: var(--c2);}
+        .allServices,.allServices>p:hover{color: var(--c3);}
+        .boxContainerMain{padding-top: 20px;display: grid;grid-template-columns: repeat(3,1fr);gap: 22px;}
+        .boxContainer{width: 100%;box-shadow: var(--bs);background-color: var(--c1);padding: 16px 16px;}
+        .boxContainer:hover{background-color: var(--c4);}
+        .boxContainer>i{font-size: 30px;color: var(--c3);padding-top: 10px;}
+        .boxContainer>h3{font-size: 22px;font-weight: 600;padding-top: 20px;}
+        .boxContainer:hover>h3{color: var(--c1);}
+        .boxContainer:hover>p{color: var(--c1);}
+        .boxContainer:hover>.rM{color: var(--c3);}
+        .boxContainer>p{color: var(--c2);padding-top: 20px;}
+        .rM{color: #333;text-decoration: underline;}
+
+        /****************************** For Mobile Responsive *************************/
+        @media only screen and (max-width:500px){
+            .boxContainerMain{grid-template-columns: repeat(1,1fr);}
+        }
+        /****************************** For Tab Responsive *******************************/
+        @media (min-width:500px) and (max-width:1024px){
+            .boxContainerMain{grid-template-columns: repeat(2,1fr);}
+        }
+    </style>
+    <section class="widget-section secWB">
+        <div class="container divWB">
+            <div class="inDivWB">
+                <div class="innerDivTitle">
+                    <p>Our services</p>
+                    <h1>What we bring to you</h1>
+                </div>
+                <div class="allServices">
+                    <p><a href="">all services</a></p>
+                </div>
+            </div>
+            <div class="boxContainerMain">
+                <div class="boxContainer">
+                    <i class="fa-solid fa-umbrella"></i>
+                    <h3>Placements</h3>
+                    <p>There are many talented and skilled candidates who possibly seek employment in your company. The challenge lies in finding the right candidate who will meet your requirements and will excel once hired.</p>
+                    <p class="rM"><a href="">Read More</a></p>
+                </div>
+                <div class="boxContainer">
+                    <i class="fa-solid fa-box"></i>
+                    <h3>Staffing</h3>
+                    <p>HR Outsourcing is gaining acceptance rapidly. We at Wings are equipped to help organizations focus on their core areas of business which demand their creative and management time.</p>
+                    <p class="rM"><a href="">Read More</a></p>
+                </div>
+                <div class="boxContainer">
+                    <i class="fa-solid fa-signal-bars"></i>
+                    <h3>Corporate Training</h3>
+                    <p>Your Campaign begins with understanding. We help you discern: What are your strengths and the value of your skills and strengths. What you love to do and the value of the qualities you offer.</p>
+                    <p class="rM"><a href="">Read More</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--------------------------------- Section For Forms ----------------------------------->
+    <style>
+        .secForm{width: 100%;background-image: url("assters/images/bg-home1-2.jpg");background-position: center;background-repeat: no-repeat;background-size: cover;background-attachment: scroll;}
+        .inDivContent{width: 35%;}
+        .inDivContent>h1{color: var(--c1);font-size: 40px;font-weight: 800;}
+        .inDivContent>p{padding-top: 10px;}
+        .divForm{display: flex;justify-content: space-around;align-items: center;}
+        .formContainer input[type="text"],
+        .formContainer input[type="email"],
+        .formContainer input[type="tel"],
+        .formContainer select {width: 100%; padding: 10px;font-size: 16px;border-bottom: 1px solid #ccc;border: none;border-radius: 5px;margin-bottom: 20px;}
+        .formContainer button{border-radius: 10px;width: 150px;height: 50px;font-family: var(--ff2);font-size: 20px;font-weight: 600;background: var(--c3);color: var(--c1);cursor: pointer;}
+        .formContainer{display: grid;grid-template-columns: repeat(2,1fr);gap: 22px;}
+
+        /*********************************** For Mobile Responsive ***************************************/
+        @media only screen and (max-width:500px){
+            .divForm{display: grid;grid-template-columns: repeat(1,1fr);width: 100%;}
+            .inDivContent{width: 100%;}
+            .formContainer{grid-template-columns: repeat(1,1fr);}
+        }
+
+        /******************************* For Tab Responsive ********************************/
+        @media (min-width:500px) and (max-width:1024px){
+            .divForm{display: grid;grid-template-columns: repeat(1,1fr);width: 100%;}
+            .inDivContent{width: 100%;}
+            .formContainer{grid-template-columns: repeat(2,1fr);}
+        }
+    </style>
+    <section class="widget-section secForm">
+        <div class="container divForm">
+            <div class="inDivContent">
+                <h1>Request a Free Call Back</h1>
+                <p>Provide discussion information and we’ll get back to you as soon as possible</p>
+            </div>
+            <div class="inDivForm">
+                <form action="#" class="formContainer">
+                    <input type="text" name="name" id="name" placeholder="Your Name">
+                    <select id="cars" name="cars">
+                        <option value="Placements">Placements</option>
+                        <option value="Staffing">Staffing</option>
+                        <option value="Corporate">Corporate Training</option>
+                        <option value="Campus">Campus Drive</option>
+                    </select>
+                    <input type="email" name="email" id="email" placeholder="Your Email">
+                    <input type="tel" name="tel" id="tel" placeholder="Your Number">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-------------------------------- Section For Photos --------------------------------------------------->
+    <style>
+        .inDivWB{display: flex;justify-content: space-between;align-items: center;}
+        .innerDivTitle>p{font-size: 16px;font-weight: 900;text-transform: uppercase;color: var(--c2);}
+        .innerDivTitle>h1{font-size: 40px;font-weight: 800;text-transform: capitalize;padding-top: 15px;}
+        .allServices{font-size: 16px; font-weight: 900;text-transform: uppercase;text-decoration: underline; color: var(--c2);}
+        .allServices>p{color: var(--c2);}
+        .allServices,.allServices>p:hover{color: var(--c3);}
+        .gallery{padding-top: 16px;display: grid;grid-template-columns: repeat(4,1fr);gap: 22px;}
+        .galleryImg{width: 100%;}
+        .galleryImg>img{width: 100%;}
+
+        /***************************************** For Mobile Responsive *******************************/
+        @media only screen and (max-width:500px){
+            .gallery{grid-template-columns: repeat(1,1fr);}
+        }
+
+        /************************* For Tab Responsive *******************************/
+        @media (min-width:500px) and (max-width:1024px){
+            .gallery{grid-template-columns: repeat(2,1fr);}
+        }
+    </style>
+    <section class="widget-section secPhoto">
+        <div class="container divPhoto">
+            <div class="inDivWB">
+                <div class="innerDivTitle">
+                    <p>our Drives</p>
+                    <h1>Our latest drives</h1>
+                </div>
+                <div class="allServices">
+                    <p><a href="">View All Posts</a></p>
+                </div>
+            </div>
+            <div class="gallery">
+                <div class="galleryImg">
+                    <img src="./assters/images/cheerful-colleagues-working-blueprint.jpg" alt="caseImg1">
+                </div>
+                <div class="galleryImg">
+                    <img src="./assters/images/medium-shot-people-sitting-table.jpg" alt="caseImg2">
+                </div>
+                <div class="galleryImg">
+                    <img src="./assters/images/medium-shot-people-working-together.jpg" alt="caseImg3">
+                </div>
+                <div class="galleryImg">
+                    <img src="./assters/images/stylish-elegant-couple-car-salon.jpg" alt="caseImg4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------------------------------------------- Footer  ------------------------------------------->
+
+    <footer class="footer">
+        <div class="upper_section">
+            <div class="footer_row">
+                <div class="footer_col fc1">
+                    <h3 class="footer_title"> About Us </h3>
+                    <p>Hiring Team is a creative business that was started by seasoned individuals in the field. We are a tech-driven educational services company that specializes in creating and delivering training programs and staffing solutions that are pertinent to the industry. Our goal is to ensure a smooth fit for success by bridging the skills gap between the workforce and industry expectations.</p>
+                    <div class="footer_social">
+                        <a href="" target="_blank"> <i class="fa-brands fa-facebook-f"></i> </a>
+                        <a href="" target="_blank"> <i class="fa-brands fa-instagram"></i>  </a>
+                        <a href="" target="_blank"> <i class="fa-brands fa-x-twitter"></i>  </a>
+                        <a href="" target="_blank"> <i class="fa-brands fa-youtube"></i>    </a>
+                    </div>
+                </div>
+                <div class="footer_col fc2">
+                    <h3 class="footer_title"> Useful Links </h3>
+                    <ul class="footer_link">
+                        <li> <a href="./index.html" target="_self">   Home     </a> </li>
+                        <li> <a href="./aboutus.html" target="_self">   About Us   </a> </li>
+                        <li> <a href="./services.html" target="_self">   Services </a> </li>
+                        <li> <a href="./careers.html" target="_self">   Career     </a> </li>
+                        <li> <a href="./contact.html" target="_self">   Contact Us  </a> </li>
+                    </ul>
+                </div>
+                <div class="footer_col">
+                    <h3 class="footer_title"> Get In Touch </h3>
+
+                    <a class="footer_anch" href="tel:">
+                        <ul> <li> <i class="fa-solid fa-phone"></i> </li> <li> <h4> PHONE : </h4> <p> 1234567890 </p> </li> </ul>
+                    </a>
+                    <a class="footer_anch" href="mailto:">
+                        <ul> <li> <i class="fa-solid fa-envelope"></i> </li> <li> <h4> EMAIL : </h4> <p> info@gmail.com </p> </li> </ul>
+                    </a>
+                    <a class="footer_anch" href="" target="_blank">
+                        <ul>
+                            <li> <i class="fa-solid fa-map"></i> </li>
+                            <li> <h4>OFFICE :</h4> <p> Vijayawada, Andhra Pradesh </p> </li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_section">
+            <div class="bottom_row"> <p> © Copyright 2024. All Rights Reserved by <a href=""> Hiring Team </a> </p> </div>
+        </div>
+    </footer>
+    <!------------------------- Script Code ---------------------------------->
+    <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          x.classList.toggle("show"); // Toggle the "show" class to trigger transition
+        }
+    </script>
+</body>
+</html>

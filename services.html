@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Page</title>
+    <!----------------------------- Css Links ---------------------------------->
+    <link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-------------------------------------- Header Content ----------------------------------------------->
+    <header class="headPage">
+        <nav class="navHead">
+            <div class="inDivHead">
+                <div class="innerDivCont">
+                    <ul class="ulCont">
+                        <li><i class="fa-solid fa-location-dot"></i> <p>Vijayawada <a href="">(View Map)</a></p></li>
+                        <li><i class="fa-solid fa-phone"></i> <p><a href="">1234567890</a></p></li>
+                    </ul>
+                </div>
+                <div class="innerSocialIcons">
+                    <ul class="socialMedia">
+                        <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mainHeader topnav">
+                <div class="logoDiv active">
+                    <a href=""><img src="./assters/images/Black & White Minimalist Business Logo (2).png" alt=""></a>
+                </div>
+                <div class="menuList">
+                    <ul class="ulMenuList mobile-container" id="myLinks">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./aboutus.html">About Us</a></li>
+                        <li class="dropDown">
+                            <button class="dropBtn">Services <i class="fa-solid fa-angle-down dA"></i></button>
+                            <div class="divSubMenuList">
+                                <ul class="subMenuList">
+                                    <li><a href="./placements.html"><i class="fa-solid fa-chevrons-right"></i> Placements</a></li>
+                                    <li><a href="./staffing.html"><i class="fa-solid fa-chevrons-right"></i> Staffing</a></li>
+                                    <li><a href="./abroadcontries.html"><i class="fa-solid fa-chevrons-right"></i> Abroad Education</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="./careers.html">Careers</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa-solid fa-bars"></i></a>
+            </div>
+        </nav>
+    </header>
+
+     <!-------------------------------------- Banner Page ---------------------------------------->
+     <style>
+        .secBanP{background-image: url("assters/images/services.jpg");background-position: center;background-repeat: no-repeat;background-size: cover;background-attachment: scroll;height: 90vh;}
+        .dark-overlay {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); /* Semi-transparent dark overlay */z-index: 1; /* Place it above the image */}
+
+        .divBanP{display: flex;justify-content: space-around;align-items: center;height: 100%;}
+        .placeMents>h1{font-size: 40px;font-weight: 900;color: var(--c1);}
+        .ulListPlacements{display: grid;grid-template-columns: repeat(2,1fr); gap : 10px;font-size: 18px;color: var(--c1);}
+        .ulListPlacements>li{font-weight: 800;}
+        .ulListPlacements>li:hover{color: var(--c3);}
+
+        /********************************* For Mobile Responsive ************************************/
+
+        @media only screen and (max-width:500px){
+            .secBanP{background-position: center;background-repeat: no-repeat;background-size: cover;background-attachment: scroll;height: 50vh;}
+            .divBanP{display: grid;gap: 16px;height: auto;position: absolute;top: 36%;}
+            .placeMents>h1{font-size: 30px}
+        }
+
+        /************************************* For Tab Responsive *********************************************************/
+
+        @media (min-width:500px) and (max-width:1024px){
+            .secBanP{background-position: center;background-repeat: no-repeat;background-size: cover;background-attachment: scroll;height: 50vh;}
+            .divBanP{display: grid;gap: 16px;height: auto;position: absolute;top: 36%;}
+            .placeMents>h1{font-size: 30px}
+        }
+    </style>
+    <section class="widget-section secBanP">
+        
+        <div class="container divBanP">
+            <div class="placeMents">
+                <h1>About Us</h1>
+            </div>
+            <div class="divUlListPlacements">
+                <ul class="ulListPlacements">
+                    <li><a href="./index.html">Home <i class="fa-solid fa-angle-right"></i></a></li>
+                    <li><a href="./services.html">Services</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!----------------------------------- Section For Placement Content ------------------------------------------------>
+    <style>
+        .secPC{background-color: #E5EEF6;padding: 90px 22px !important;}
+        .divPC{display: grid;grid-template-columns: repeat(2,1fr);gap: 22px;background-color: #fff;padding: 30px; align-items: center;}
+        .divContentP{width: 100%;}
+        .divContentP>h1{font-size: 30px;font-weight: 900;}
+        .divContentP>p{padding-top: 10px;}
+        .divImgP{width: 100%;}
+        .divImgP>img{width: 100%;}
+        .viewpage{width: 20%; margin-top: 10px;}
+        .viewpage p{padding: 12px 30px; font-size: 18px; font-weight: 800; color: var(--c1); background: var(--c3); border-radius: 10px;}
+
+        /************************************ For Mobile Responsive ****************************/
+        @media only screen and (max-width:500px){
+            .divPC{grid-template-columns: repeat(1,1fr);}
+            .divContentP>p{text-align: justify;}
+            .divImgP {order: -1; }
+            .viewpage{width: 40%;}
+        }
+
+        /***************************** For Tab Responsive ***********************************/
+        @media (min-width:500px) and (max-width:1024px){
+            .divPC{grid-template-columns: repeat(1,1fr);}
+            .divContentP>p{text-align: justify;}
+            .divImgP {order: -1; }
+            .viewpage{width: 16%;}
+        }
+    </style>
+    <section class="widget-section secPC">
+        <div class="container divPC">
+                <div class="divContentP">
+                    <h1>Placements</h1>
+                    <p>Many skilled and talented candidates aspire to join your organization, but the challenge lies in finding the perfect fit who excels post-hiring. Our hiring team thoroughly vets each applicant and employs a multi-skill assessment approach to ensure confidence in their abilities, leading to a seamless interview process. With expertise in building diverse teams, recruiting for specialized roles, and managing long-term hiring campaigns, we deliver tailored solutions to meet your specific needs.</p>
+                    <div class="viewpage">
+                        <p><a href="./placements.html">View</a></p>
+                    </div>
+                </div>
+                <div class="divImgP">
+                    <img src="./assters/images/placementCaseMain.jpeg" alt="placement">
+                </div>
+        </div>
+    </section>
+
+    <!----------------------------------- Section For Placement Content ------------------------------------------------>
+    <style>
+        .secS{background-color: #fff;padding: 90px 22px !important;}
+        .divS{display: grid;grid-template-columns: repeat(2,1fr);gap: 22px;background-color: #E5EEF6;padding: 30px;align-items: center;}
+
+        /************************************ For Mobile Responsive ****************************/
+        @media only screen and (max-width:500px){
+            .divS{grid-template-columns: repeat(1,1fr);}
+        }
+
+        /***************************** For Tab Responsive ***********************************/
+        @media (min-width:500px) and (max-width:1024px){
+            .divS{grid-template-columns: repeat(1,1fr);}
+        }
+    </style>
+    <section class="widget-section secS">
+        <div class="container divS">
+                <div class="divImgP">
+                    <img src="./assters/images/staffing.jpg" alt="staffing">
+                </div>
+                <div class="divContentP">
+                    <h1>Staffing</h1>
+                    <p>Our Hiring Team is dedicated to supporting you at every step, making the process of finding your ideal candidates both seamless and cost-effective. We prioritize your organization's unique needs, ensuring a streamlined approach that saves you time and resources. By leveraging our expertise, you gain access to a pool of qualified and talented applicants without the usual hassle of recruitment. Our tailored strategies focus on efficiency, accuracy, and affordability, ensuring that you connect with the best-fit candidates who align with your goals and contribute to your success.</p>
+                    <div class="viewpage">
+                        <p><a href="./staffing.html">View</a></p>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+     <!----------------------------------- Section For Placement Content ------------------------------------------------>
+    
+    <section class="widget-section secPC">
+        <div class="container divPC">
+                <div class="divContentP">
+                    <h1>Abroad Education</h1>
+                    <p>The Hiring Team is dedicated to empowering Indian students with access to top-tier global education opportunities. Through expert, career-focused solutions, we guide students in selecting the best-fit colleges, universities, courses, and countries like the USA, UK, Canada, Australia, and more. Our professional platform simplifies decisions on VISAs and financial aid, ensuring a smooth journey. From your first consultation to settling in your destination country, we provide comprehensive support and mentorship, making your transition seamless, affordable, and hassle-free.</p>
+                    <div class="viewpage">
+                        <p><a href="./abroadcontries.html">View</a></p>
+                    </div>
+                </div>
+                <div class="divImgP">
+                    <img src="./assters/images/hrDiscussions.jpg" alt="AE">
+                </div>
+        </div>
+    </section>
+
+    <!--------------------------------- Section For Form --------------------------------->
+    <style>
+        .inDivORM{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .inDivORM>div{
+            width: 50%;
+        }
+        .inDivORM>div>h1{
+            font-size: 32px;
+            font-weight: 800;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .inDivORM>div+div{
+            width: 40%;
+        }
+        .innerDivORM{width: 100%;}
+        .innerDivORM img{width: 100%;}
+        .innerDivORM h1{font-size: 50px;font-weight: 800;}
+                    .secPUF1{box-shadow: var(--bs);border-radius: 10px;}
+                    /* The popup form - hidden by default */
+                    .form-popup1 {
+                        border: 3px solid #f1f1f1;
+                        box-shadow: var(--bs);
+                        display: flex; /* Use Flexbox for centering */
+                        justify-content: center; /* Horizontally center */
+                        align-items: center; /
+                    }
+        
+                    /* Add styles to the form container */
+                    .form-container1 {
+                        max-width: 500px;
+                        padding: 10px;
+                        background-color: white;
+                        padding: 16px 8px 0px 8px;
+                        border-radius: 8px;
+                    }
+                    .form-container1 h1{
+                        text-align: center;
+                    }
+                    .form-container1 p{
+                        text-align: center;
+                        font-weight: 500;
+                    }
+                    /* Full-width input fields */
+                    .form-container1 input[type=text], .form-container1 input[type=password], .form-container1 input[type=email], .form-container1 input[type=tel],.form-container1 select, 
+                    .form-container1 textarea {
+                        width: 100%;
+                        padding: 15px;
+                        color: var(--c3);
+                        margin: 5px 0 22px 0;
+                        border: none;
+                        background: #f1f1f1;
+                        height: 45px;
+                    }
+        
+                    /* When the inputs get focus, do something */
+                    .form-container1 input[type=text]:focus, .form-container1 input[type=password]:focus , .form-container1 input[type=email]:focus, .form-container1 input[type=tel]:focus,.form-container1 select:focus, 
+                    .form-container1 textarea:focus {
+                        background-color: #ddd;
+                        outline: none;
+                    }
+                    .form-container1 textarea {
+                        resize: vertical;
+                    }
+        
+                    /* Set a style for the submit/login button */
+                    .form-container1 .btn {
+                        background: var(--c3);
+                        color: white;
+                        padding: 16px 20px;
+                        border: none;
+                        cursor: pointer;
+                        height: 45px;
+                        width: 100%;
+                        margin-bottom:10px;
+                        opacity: 0.8;
+                    }
+    
+        
+                    /* Add some hover effects to buttons */
+                    .form-container .btn:hover, .open-button:hover {
+                        opacity: 1;
+                    }
+                    .dark-background {
+                        transition: background-color 0.3s ease;
+                    }
+
+                    .paraCVA{
+                        text-align: left !important;
+                        padding-left: 16px;
+                        background-color: #f9f9f9;
+                        height: 6vh;
+                        display: flex;
+                        align-items: center;
+                    }
+                    .divACV{
+                        margin: 10px 0;
+                    }
+    
+        /*************************** For Mobile Responsive ***********************************/
+        @media only screen and (max-width:500px){
+            .inDivORM {
+                display: flex;
+                flex-direction: column; /* Stack content with image below */
+                align-items: center;
+                width: 100%;
+                margin: 0;
+                /* padding: 10px; */
+            }
+            .innerDivORM h1{font-size: 30px;font-weight: 800;}
+            .inDivORM>div{
+                width: 100%;
+            }
+            .inDivORM>div+div{
+                width: 100%;
+            }
+            .inDivORM1 {
+                width: 100%;
+            }
+            .innerDivORM{
+                width: 100%;
+            }
+    
+        }
+        /************************************* For Tab Responsive ****************************************/
+        @media (min-width:500px) and (max-width:1024px){
+            .inDivORM {
+                display: flex;
+                flex-direction: column; /* Stack content with image below */
+                align-items: center;
+                width: 100%;
+                margin: 0;
+                /* padding: 10px; */
+            }
+            .innerDivORM h1{font-size: 30px;font-weight: 800;}
+            .inDivORM>div{
+                width: 100%;
+            }
+            .inDivORM>div+div{
+                width: 100%;
+            }
+            .inDivORM1 {
+                width: 100%;
+            }
+            .innerDivORM{
+                width: 100%;
+            }
+        }
+    </style>
+      <section class="secORM widget-section">
+        <div class="divORM container">
+            <div class="inDivORM">
+                <div class="inDivORM1">
+                    <div class="innerDivORM">
+                        <img src="./assters/images/formfill.jpg" alt="formfill">
+                    </div>
+                </div>
+                <div>
+                    <section class="secPUF1">
+                        <div class="divPUF1 container">
+                
+                                <div class="form-popup1">
+                                <form action="/action_page.php" class="form-container1">
+                                    <input type="text" placeholder="Full Name*" required name="name">
+                                    <input type="email" placeholder="Work Email Address*" name="email" required>
+                                    <input type="tel" placeholder="Phone Number*" name="number">
+                                    <input type="text" placeholder="Company Name*" name="cName">
+                                    <input type="email" placeholder="Email Address*" name="email" required>
+                                    <div class="divACV">
+                                    <p class="paraCVA">Attach CV</p>
+                                    <input type="file" name="fileR" placeholder="Send Your Resume">
+                                    </div>
+                                    <button type="submit" class="btn">Submit</button>
+                                </form>
+                                </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+    
+        </div>
+      </section>
+
+    <!------------------------------------------- Footer  ------------------------------------------->
+
+    <footer class="footer">
+        <div class="upper_section">
+            <div class="footer_row">
+                <div class="footer_col fc1">
+                    <h3 class="footer_title"> About Us </h3>
+                    <p>Hiring Team is a creative business that was started by seasoned individuals in the field. We are a tech-driven educational services company that specializes in creating and delivering training programs and staffing solutions that are pertinent to the industry. Our goal is to ensure a smooth fit for success by bridging the skills gap between the workforce and industry expectations.</p>
+                    <div class="footer_social">
+                        <a href="" target="_blank"> <i class="fa-brands fa-facebook-f"></i> </a>
+                        <a href="" target="_blank"> <i class="fa-brands fa-instagram"></i>  </a>
+                        <a href="" target="_blank"> <i class="fa-brands fa-x-twitter"></i>  </a>
+                        <a href="" target="_blank"> <i class="fa-brands fa-youtube"></i>    </a>
+                    </div>
+                </div>
+                <div class="footer_col fc2">
+                    <h3 class="footer_title"> Useful Links </h3>
+                    <ul class="footer_link">
+                        <li> <a href="./index.html" target="_self">   Home     </a> </li>
+                        <li> <a href="./aboutus.html" target="_self">   About Us   </a> </li>
+                        <li> <a href="./services.html" target="_self">   Services </a> </li>
+                        <li> <a href="./careers.html" target="_self">   Career     </a> </li>
+                        <li> <a href="./contact.html" target="_self">   Contact Us  </a> </li>
+                    </ul>
+                </div>
+                <div class="footer_col">
+                    <h3 class="footer_title"> Get In Touch </h3>
+
+                    <a class="footer_anch" href="tel:">
+                        <ul> <li> <i class="fa-solid fa-phone"></i> </li> <li> <h4> PHONE : </h4> <p> 1234567890 </p> </li> </ul>
+                    </a>
+                    <a class="footer_anch" href="mailto:">
+                        <ul> <li> <i class="fa-solid fa-envelope"></i> </li> <li> <h4> EMAIL : </h4> <p> info@gmail.com </p> </li> </ul>
+                    </a>
+                    <a class="footer_anch" href="" target="_blank">
+                        <ul>
+                            <li> <i class="fa-solid fa-map"></i> </li>
+                            <li> <h4>OFFICE :</h4> <p> Vijayawada, Andhra Pradesh </p> </li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_section">
+            <div class="bottom_row"> <p> © Copyright 2024. All Rights Reserved by <a href=""> Hiring Team </a> </p> </div>
+        </div>
+    </footer>
+
+    <!------------------------- Script Code ---------------------------------->
+    <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            x.classList.toggle("show"); // Toggle the "show" class to trigger transition
+        }
+    </script>   
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers</title>
+
+    <!----------------------------- Css Links ---------------------------------->
+    <link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-------------------------------------- Header Content ----------------------------------------------->
+    <header class="headPage">
+        <nav class="navHead">
+            <div class="inDivHead">
+                <div class="innerDivCont">
+                    <ul class="ulCont">
+                        <li><i class="fa-solid fa-location-dot"></i> <p>Vijayawada <a href="">(View Map)</a></p></li>
+                        <li><i class="fa-solid fa-phone"></i> <p><a href="">1234567890</a></p></li>
+                    </ul>
+                </div>
+                <div class="innerSocialIcons">
+                    <ul class="socialMedia">
+                        <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mainHeader topnav">
+                <div class="logoDiv active">
+                    <a href=""><img src="./assters/images/Black & White Minimalist Business Logo (2).png" alt="HiringTeamLogo"></a>
+                </div>
+                <div class="menuList">
+                    <ul class="ulMenuList mobile-container" id="myLinks">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./aboutus.html">About Us</a></li>
+                        <li class="dropDown">
+                            <button class="dropBtn">Services <i class="fa-solid fa-angle-down dA"></i></button>
+                           <div class="divSubMenuList">
+                                <ul class="subMenuList">
+                                    <li><a href="./placements.html"><i class="fa-solid fa-chevrons-right"></i> Placements</a></li>
+                                    <li><a href="./staffing.html"><i class="fa-solid fa-chevrons-right"></i> Staffing</a></li>
+                                    <li><a href="./abroadcontries.html"><i class="fa-solid fa-chevrons-right"></i> Abroad Education</a></li>
+                                </ul>
+                           </div>
+                        </li>
+                        <li><a href="./careers.html">Careers</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa-solid fa-bars"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-------------------------------------- Banner Page ---------------------------------------->
+    <style>
+        .secBanP{background-image: url("assters/images/careers.jpg");background-position: center;background-repeat: no-repeat;background-size: cover;background-attachment: scroll;height: 90vh;}
+        .dark-overlay {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); /* Semi-transparent dark overlay */z-index: 1; /* Place it above the image */}
+
+        .divBanP{display: flex;justify-content: space-around;align-items: center;height: 100%;}
+        .placeMents>h1{font-size: 40px;font-weight: 900;color: var(--c1);}
+        .ulListPlacements{display: grid;grid-template-columns: repeat(2,1fr); gap : 10px;font-size: 18px;color: var(--c1);}
+        .ulListPlacements>li{font-weight: 800;}
+        .ulListPlacements>li:hover{color: var(--c3);}
+
+        /********************************* For Mobile Responsive ************************************/
+
+        @media only screen and (max-width:500px){
+            .secBanP{background-position: center;background-repeat: no-repeat;background-size: cover;background-attachment: scroll;height: 50vh;}
+            .divBanP{display: grid;gap: 16px;height: auto;position: absolute;top: 36%;}
+            .placeMents>h1{font-size: 30px}
+        }
+
+        /************************************* For Tab Responsive *********************************************************/
+
+        @media (min-width:500px) and (max-width:1024px){
+            .secBanP{background-position: center;background-repeat: no-repeat;background-size: cover;background-attachment: scroll;height: 50vh;}
+            .divBanP{display: grid;gap: 16px;height: auto;position: absolute;top: 36%;}
+            .placeMents>h1{font-size: 30px}
+        }
+    </style>
+    <section class="widget-section secBanP">
+        
+        <div class="container divBanP">
+            <div class="placeMents">
+                <h1>Career</h1>
+            </div>
+            <div class="divUlListPlacements">
+                <ul class="ulListPlacements">
+                    <li><a href="./index.html">Home <i class="fa-solid fa-angle-right"></i></a></li>
+                    <li><a href="./careers.html">Career</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!--------------------------- Section For Career -------------------------->
+    <style>
+        .aboutC{padding: 30px 30px;}
+        .aboutC h6{font-size: 16px;font-weight: 800;text-transform: uppercase;}
+        .aboutC h1{font-size: 40px;font-weight: 800;text-transform: capitalize;padding-top: 10px;}
+        .aboutC p{padding-top: 10px;}
+        .oG{text-decoration: underline;color: var(--c3);font-weight: 800;}
+        .followSM{margin-top: 20px;width: 20%;}
+        .followSM h6{font-size: 16px;font-weight: 800;text-transform: uppercase;}
+        .followSM{display: grid;grid-template-columns: repeat(2,1fr);}
+        .followSM ul{display: grid;grid-template-columns: repeat(2,1fr);width: 50%;align-items: center;}
+        .followSM ul li:hover{color: var(--c3);}
+
+        .carousel-cell {width: 100%; height: 600px; margin-right: 10px; position: relative; /* Important for overlay positioning */overflow: hidden;}
+        .carouselcellcm {display: block; position: relative; width: 100%; height: 100%;}
+        .carousel-cell img {width: 100%; height: 100% ;object-fit: center; /* Ensures the image covers the cell */}
+        .dark-overlay {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); /* Semi-transparent dark overlay */z-index: 1; /* Place it above the image */}
+        .mailC{color: var(--c4);}
+
+        
+        @media only screen and (max-width:500px){
+            .carousel{height: 300px;}
+            .carousel-cell {height: 100%;}
+            .innerContentC{grid-template-columns: repeat(1,1fr);}
+        }
+
+        @media (min-width:500px) and (max-width:1024px){
+            .carousel{height: 300px;}
+            .carousel-cell {height: 100%;}
+            .innerContentC{grid-template-columns: repeat(2,1fr);}
+        }
+    </style>
+
+    <section class="widget-section secAboutC"></section>
+        <div class="container divAboutC">
+            <div class="aboutC">
+                <h6>Careers</h6>
+                <h1>We are Job Consultants</h1>
+                <p>If you want to grow with us mail your resumes to <a href="" class="mailC">info@gmail.com</a></p>
+                <div class="followSM">
+                    <h6>Follow Us</h6>
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i> </a></li>
+                        <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="carouselcell">
+                <div class="carousel" data-flickity='{ "autoPlay": 1500 }'>     
+                    <div class="carousel-cell">
+                        <div class="carouselcellcm">
+                            <img src="./assters/images/meeting1.jpg" alt="meeting1">
+                            <div class="dark-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-cell">
+                        <img src="./assters/images/meeting2.jpg" alt="meeting2">
+                        <div class="dark-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!------------------------------------------- Footer  ------------------------------------------->
+
+    <footer class="footer">
+        <div class="upper_section">
+            <div class="footer_row">
+                <div class="footer_col fc1">
+                    <h3 class="footer_title"> About Us </h3>
+                    <p>Hiring Team is a creative business that was started by seasoned individuals in the field. We are a tech-driven educational services company that specializes in creating and delivering training programs and staffing solutions that are pertinent to the industry. Our goal is to ensure a smooth fit for success by bridging the skills gap between the workforce and industry expectations.</p>
+                    <div class="footer_social">
+                        <a href="" target="_blank"> <i class="fa-brands fa-facebook-f"></i> </a>
+                        <a href="" target="_blank"> <i class="fa-brands fa-instagram"></i>  </a>
+                        <a href="" target="_blank"> <i class="fa-brands fa-x-twitter"></i>  </a>
+                        <a href="" target="_blank"> <i class="fa-brands fa-youtube"></i>    </a>
+                    </div>
+                </div>
+                <div class="footer_col fc2">
+                    <h3 class="footer_title"> Useful Links </h3>
+                    <ul class="footer_link">
+                        <li> <a href="./index.html" target="_self">   Home     </a> </li>
+                        <li> <a href="./aboutus.html" target="_self">   About Us   </a> </li>
+                        <li> <a href="./services.html" target="_self">   Services </a> </li>
+                        <li> <a href="./careers.html" target="_self">   Career     </a> </li>
+                        <li> <a href="./contact.html" target="_self">   Contact Us  </a> </li>
+                    </ul>
+                </div>
+                <div class="footer_col">
+                    <h3 class="footer_title"> Get In Touch </h3>
+
+                    <a class="footer_anch" href="tel:">
+                        <ul> <li> <i class="fa-solid fa-phone"></i> </li> <li> <h4> PHONE : </h4> <p> 1234567890 </p> </li> </ul>
+                    </a>
+                    <a class="footer_anch" href="mailto:">
+                        <ul> <li> <i class="fa-solid fa-envelope"></i> </li> <li> <h4> EMAIL : </h4> <p> info@gmail.com </p> </li> </ul>
+                    </a>
+                    <a class="footer_anch" href="" target="_blank">
+                        <ul>
+                            <li> <i class="fa-solid fa-map"></i> </li>
+                            <li> <h4>OFFICE :</h4> <p> Vijayawada, Andhra Pradesh </p> </li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_section">
+            <div class="bottom_row"> <p> © Copyright 2024. All Rights Reserved by <a href=""> Hiring Team </a> </p> </div>
+        </div>
+    </footer>
+    
+    <!------------------------- Script Code ---------------------------------->
+    <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          x.classList.toggle("show"); // Toggle the "show" class to trigger transition
+        }
+    </script>
+</body>
+</html>
